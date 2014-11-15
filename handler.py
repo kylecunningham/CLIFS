@@ -36,6 +36,6 @@ Same as go (direction, speed), accept that the distance parameter is included no
 			self.direction = direction
 			self.speed = speed
 			self.distance = distance
-			print ("You go ", direction, " at a speed of ", speed, " within the distance of ", distance, ".")
+			print ("You go ", direction, " at a speed of ", speed, " within the distance of ", distance, "KM.")
 		else:
 			return -1
