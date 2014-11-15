@@ -21,7 +21,7 @@ Parameters:
 direction: One of the ten available directions.
 speed: Any speed (for now).
 		"""
-		if direction == "n" or direction == "e" or direction == "s" or direction == "w" or direction == "ne" or direction == "nw" or direction == "se" or direction == "sw" or direction == "u" or direction == "d":
+		if direction == "n" or direction == "e" or direction == "s" or direction == "w" or direction == "ne" or direction == "nw" or direction == "se" or direction == "sw" or direction == "u" or direction == "d" or direction=="north" or direction=="east" or direction=="south" or direction=="west" or direction=="northwest" or direction=="southwest" or direction=="northeast" or direction=="southeast" or direction=="up" or direction=="down":
 			self.direction = direction
 			self.speed = speed
 			print ("You go ", direction, " at a speed of ", speed, ".")
@@ -32,7 +32,7 @@ speed: Any speed (for now).
 		"""
 Same as go (direction, speed), accept that the distance parameter is included now.
 		"""
-		if direction == "n" or direction == "e" or direction == "s" or direction == "w" or direction == "ne" or direction == "nw" or direction == "se" or direction == "sw" or direction == "u" or direction == "d":
+		if direction == "n" or direction == "e" or direction == "s" or direction == "w" or direction == "ne" or direction == "nw" or direction == "se" or direction == "sw" or direction == "u" or direction == "d" or direction=="north" or direction=="east" or direction=="south" or direction=="west" or direction=="northwest" or direction=="southwest" or direction=="northeast" or direction=="southeast" or direction=="up" or direction=="down":
 			self.direction = direction
 			self.speed = speed
 			self.distance = distance
