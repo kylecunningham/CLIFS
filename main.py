@@ -12,8 +12,10 @@ This function asks the user which direction to fly in and at which speed. I'll p
 	dir = input()
 	print("Now, enter a speed.")
 	speed = input()
-	handle.go(dir, speed)
-
+	return_value = handle.go(dir, speed)
+	if return_value == -1:
+		print ("Error: This is not a valid direction.")
+		main_menu()
 
 def automatic_flight():
 	"""
@@ -25,19 +27,24 @@ This function is essentially the same as the last, with one extra peramitor. Aga
 	speed = input()
 	print("Finally, enter a distance.")
 	distance = input()
-	handle.go_ex(dir, distance, speed)
+	return_value = handle.go_ex(dir, distance, speed)
+	if return_value == -1:
+		print ("Error: This is not a valid direction.")
+		main_menu()
 
-print("Welcome to C L I F S\n")
-print("A command line flight simulator\n")
-print("Copyright (C) Ks-Salutions\n")
-invalue = ""
-while invalue != "q":
-	print("Enter input: M for manual flight, A for automatic flight, or Q to quit.\n")
-	invalue = input()
-	if invalue=="q":
-		break
-	if invalue=="m":
-		manual_flight()
-	if invalue=="a":
-		automatic_flight()
+def main_menu ():
+	print("Welcome to C L I F S\n")
+	print("A command line flight simulator\n")
+	print("Copyright (C) Ks-Salutions\n")
+	invalue = ""
+	while invalue != "q":
+		print("Enter input: M for manual flight, A for automatic flight, or Q to quit.\n")
+		invalue = input()
+		if invalue=="q":
+			break
+		if invalue=="m":
+			manual_flight()
+		if invalue=="a":
+			automatic_flight()
 
+main_menu()
