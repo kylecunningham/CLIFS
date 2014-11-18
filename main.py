@@ -32,13 +32,20 @@ This function is essentially the same as the last, with one extra peramitor. Aga
 		print ("Error: This is not a valid direction.")
 		main_menu()
 
+def display_credits():
+	"""
+Displays game credits. I like modular functions!
+	"""
+	print ("C L I F S credits.\n")
+	print ("Some code copyright (C) 2014 Kyle Cunningham.\nHandler.py copyright (C) Ethin Probst.")
+
 def main_menu ():
 	print("Welcome to C L I F S\n")
 	print("A command line flight simulator\n")
 	print("Copyright (C) Ks-Salutions\n")
 	invalue = ""
 	while invalue != "q":
-		print("Enter input: M for manual flight, A for automatic flight, or Q to quit.\n")
+		print("Enter input: M for manual flight, A for automatic flight, C to display credits, or Q to quit.\n")
 		invalue = input()
 		if invalue=="q":
 			break
@@ -46,5 +53,7 @@ def main_menu ():
 			manual_flight()
 		if invalue=="a":
 			automatic_flight()
+		if invalue=="c":
+			display_credits()
 
 main_menu()
