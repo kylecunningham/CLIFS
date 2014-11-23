@@ -21,6 +21,7 @@ def automatic_flight():
 	"""
 This function is essentially the same as the last, with one extra peramitor. Again, I will probably update handle.py.
 	"""
+	print ("Welcome to the automatic flight system.\n")
 	print("Enter a direction.")
 	dir = input()
 	print("Now, enter a speed.")
